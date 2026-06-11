@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI LLM Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <h1>🤖 AI LLM Chatbot</h1>
+            <div class="model-info">
+                <span id="model-name">Model: Neural Chat v1.0</span>
+            </div>
+        </div>
+        
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Hello! I'm an AI chatbot powered by a neural language model. How can I help you today?</p>
+                </div>
+                <span class="timestamp">Just now</span>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <form id="messageForm" onsubmit="sendMessage(event)">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="userInput" 
+                        placeholder="Type your message here... (Press Ctrl+Enter to send)"
+                        rows="3"
+                    ></textarea>
+                    <button type="submit" id="sendBtn" class="send-btn">
+                        <span>Send</span>
+                        <span class="send-icon">➤</span>
+                    </button>
+                </div>
+            </form>
+            <div class="controls">
+                <button onclick="clearChat()" class="control-btn">Clear Chat</button>
+                <button onclick="downloadChat()" class="control-btn">Download</button>
+                <button onclick="toggleDarkMode()" class="control-btn">🌙 Dark Mode</button>
+                <button onclick="toggleMode()" class="control-btn">Mode: Creative</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="llm.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
